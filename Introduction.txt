@@ -1,0 +1,22 @@
+1. Create Database login_wrapper
+
+2.CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL
+);
+
+3.CREATE TABLE activity_logs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    action VARCHAR(255),
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES signs(id)
+);
+
+
+
+3.Open vs code terminal> Type karanna= cd backend > npm start index.js
+
+3.Open vs code terminal> Type karanna= cd frontend> npm start
